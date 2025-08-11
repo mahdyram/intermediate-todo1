@@ -15,19 +15,19 @@ export default function TaskList({ todos, setTodos }) {
             className="relative flex items-center justify-between px-2 py-6 border-b"
             key={id}
           >
-            <Task
-              id={id}
-              text={text}
-              completed={completed}
-              setTodos={setTodos}
-            />
-
-            {showInput && (
+            {showInput ? (
               <ChangeTaskInput
                 id={id}
                 editTasks={editTasks}
                 setEditTasks={setEditTasks}
                 todos={todos}
+                setTodos={setTodos}
+              />
+            ) : (
+              <Task
+                id={id}
+                text={text}
+                completed={completed}
                 setTodos={setTodos}
               />
             )}

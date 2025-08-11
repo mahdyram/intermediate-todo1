@@ -14,7 +14,7 @@ function App() {
     {
       id: 2,
       text: "Studying English part 2",
-      completed: false,
+      completed: true,
       showInput: false,
     },
     {

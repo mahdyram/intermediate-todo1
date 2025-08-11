@@ -34,7 +34,7 @@ export default function ChangeTaskInput({
         type="text"
         ref={(el) => (inputRef.current[id] = el)}
         placeholder=" change task ..."
-        className={"px-3 py-3 w-60 rounded outline-none bg-pink-200 mr-20"}
+        className={"px-3 py-2 w-70 rounded outline-none bg-pink-200"}
         value={editTasks[id] || ""}
         onChange={(e) =>
           setEditTasks((prev) => ({ ...prev, [id]: e.target.value }))
