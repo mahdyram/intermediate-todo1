@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Header from "./components/Header";
-import TaskInput from "./components/TaskInput";
-import TaskList from "./components/TaskList";
+import Input from "./components/Input";
+import TaskList from "./components/TaskList/TaskList";
 
 function App() {
   const [todos, setTodos] = useState([
@@ -29,7 +29,7 @@ function App() {
     <div className="flex items-center justify-center min-h-screen bg-gray-200 pb-10 pt-10">
       <div className="w-full max-w-2xl px-4 py-8 mx-auto bg-white shadow-lg rounded-lg">
         <Header />
-        <TaskInput setTodos={setTodos} />
+        <Input setTodos={setTodos} />
         <TaskList todos={todos} setTodos={setTodos} />
       </div>
     </div>

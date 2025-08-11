@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function TaskInput({ setTodos }) {
+export default function Input({ setTodos }) {
   const [task, setTask] = useState("");
 
   const handleSubmit = (e) => {
