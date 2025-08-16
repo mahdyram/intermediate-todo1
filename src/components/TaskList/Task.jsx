@@ -15,7 +15,7 @@ export default function Task({ id, text, completed, setTodos }) {
         checked={completed}
         onChange={() => handleCheck(id)}
       />
-      <span className={`text-gray-600 ${completed && "line-through"}`}>
+      <span className={`text-slate-800 ${completed && "line-through"}`}>
         {text}
       </span>
     </label>

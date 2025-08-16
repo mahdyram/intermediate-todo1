@@ -12,7 +12,7 @@ export default function TaskList({ todos, setTodos }) {
       <ul className="list-reset">
         {todos.map(({ id, text, completed, showInput }) => (
           <li
-            className="relative flex items-center justify-between px-2 py-6 border-b"
+            className="relative flex items-center justify-between px-2 py-6 border-b border-gray-300"
             key={id}
           >
             {showInput ? (

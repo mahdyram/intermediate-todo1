@@ -35,11 +35,16 @@ function App() {
   }, [todos]);
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-200 pb-10 pt-10">
-      <div className="w-full max-w-2xl px-4 py-8 mx-auto bg-white shadow-lg rounded-lg">
+    <div className="flex items-center justify-center min-h-screen bg-slate-200 pb-10 pt-10">
+      <div className="w-full max-w-2xl px-8 py-8 mx-auto bg-white shadow-lg rounded-lg">
         <Header />
         <Input setTodos={setTodos} />
         <TaskList todos={todos} setTodos={setTodos} />
+        {!todos.length && (
+          <p className="text-lg text-slate-600 mt-8 pt-5 border-t border-gray-400">
+            Add a new Todo!
+          </p>
+        )}
       </div>
     </div>
   );

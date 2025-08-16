@@ -32,9 +32,9 @@ export default function ChangeTaskInput({
     <form onSubmit={(e) => handleChangeTxt(e, id)}>
       <input
         type="text"
-        ref={(el) => (inputRef.current[id] = el)}
         placeholder=" change task ..."
-        className={"px-3 py-2 w-70 rounded outline-none bg-pink-200"}
+        className={"px-3 py-2.5 w-70 rounded outline-none bg-slate-300"}
+        ref={(el) => (inputRef.current[id] = el)}
         value={editTasks[id] || ""}
         onChange={(e) =>
           setEditTasks((prev) => ({ ...prev, [id]: e.target.value }))

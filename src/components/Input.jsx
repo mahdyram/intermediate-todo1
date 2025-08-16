@@ -19,14 +19,21 @@ export default function Input({ setTodos }) {
   };
   return (
     <div className="relative mb-4">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="flex justify-between">
         <input
           type="text"
           placeholder="What needs to be done today?"
-          className="w-full px-3 py-3 border border-gray-600 rounded outline-none"
+          className="w-118 px-3 py-3 border border-slate-500 rounded outline-none"
           value={task}
           onChange={(e) => setTask(e.target.value)}
         />
+        <button
+          type="submit"
+          className="bg-blue-500 w-30 text-lg rounded-sm text-white cursor-pointer transition-colors duration-300 ease-in-out hover:bg-blue-600"
+          onClick={handleSubmit}
+        >
+          Add
+        </button>
       </form>
     </div>
   );
